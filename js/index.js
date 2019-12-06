@@ -86,7 +86,7 @@ function getProductsAsHtmlString(product){
                       Quantity in stock: ${product.quantity}
                   </div>
                   <div>
-                    ${product.category}
+                    Category: ${product.category}
                   </div>
                   <data value="39"> <ins id="price">${product.price}</ins></data>
                   <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
