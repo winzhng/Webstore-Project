@@ -1,0 +1,94 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    color: #404347;
+    margin: 1.5em;
+}
+body{
+    background-color: #fafafa;
+}   
+.logo{
+    height: 10em;
+    width: 10em;
+    vertical-align: middle;
+    display: inline-block;
+}
+.nav_links button{
+    vertical-align: top;
+    background-color: #e7e7e7;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    float: left;
+    border-right: none;
+}
+.dresses li{
+    display: list-item;
+}
+.product{
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: repeat (5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+.product1, .product2{
+    grid-column-start: 2;
+    grid-row: 1.75;
+    margin-top: 1.5em;
+}
+.product3, .product4, .product5{
+    grid-column-start: 2;
+    grid-row: 1.75;
+    margin-top: 1.5em;
+}
+
+.product img{
+    width: 20em;
+    margin-left: 2em;
+    padding: 15px;
+    margin-bottom: 1em;
+}
+h1{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1em;
+    font-weight: bold;
+}
+a, .material-icons{
+    color: salmon;
+    text-decoration: none;
+    cursor: pointer;
+}
+p {
+    font-size: 14px;
+    margin-top: 1em;
+}
+fieldset{
+    margin-top: 2em;
+    list-style: none;
+
+}
+fieldset li{
+    display: inline;
+    justify-content: space-between;
+}
+.product-pages li {
+    list-style: none;
+    display: inline-block;
+}
+.extras p, .product-pages{
+    text-align: center;
+    list-style: none;
+}
+.extras li {
+    display: inline-block;
+    margin: 1em;
+    position: sticky;
+  }
+.social img{
+    padding: 0.25em;
+    width: 2.5em;
+}
