@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <header>
+    <header class="page_nav_header">
       <!-- Navigation menu and toggle button (non-functional) -->
       <nav aria-label="Primary" class="primary">
         <button type="button">
@@ -21,33 +21,21 @@
             <a href="index.html"><img src="img/logo.png" alt="logo"></a>
       </div>
         <ul class="nav_links">
-          <li><button><a href="#">Dresses</a></button>
-            <ul class="dresses">
-              <li><a href="#">Casual</a></li>
-              <li><a href="#">Evening</a></li>
-              <li><a href="#">Bodycon</a></li>
-            </ul>
+          <li class="nav_link_button"><button><a href="#">Dresses</a></button></li>
+          <li class="nav_link_button"><button><a href="#">Shoes</a></button></li>
+          <li class="nav_link_button"><button><a href="#">Tops</a></button></li>
+          <li class="nav_link_button"><button><a href="#">Coats & Jackets</a></button><li>
+          <li>
+              <label>Search
+                <input type="search" name="find" id="find">
+              </label>
           </li>
-          <li><button><a href="#">Shoes</a></button></li>
-          <li><button><a href="#">Tops</a></button></li>
-          <li><button><a href="#">Coats & Jackets</a></button></li>
-        </ul>
-      </nav>
-
-      <!-- Search for a product (non-functional) -->
-      <form>
-        <label>Search
-          <input type="search" name="find" id="find">
-        </label>
-        <button type="button"><span class="material-icons">search</span></button>
-      <!-- Additional nav links -->
-        <ul>
+          <li><button type="button"><span class="material-icons">search</span></button></li>
           <li><a href="#"><span class="material-icons">favorite_border</span></a></li>
           <li><a href="#"><span class="material-icons">shopping_cart</span></a></li>
         </ul>
-      </form>
+      </nav>
     </header>
-
     <main>
       <header>
         <h1>Sale on Dresses</h1>
@@ -118,220 +106,7 @@
 
       <section>
         <h2>Results</h2>
-
-        <div id="products">
-          <!-- Product 1 -->
-          <article class="product">
-            <header>
-              <img src="img/romper.jpg" alt="Romper" id="image">
-            </header>
-            <section class="product1">
-              <h3 id="name">Cotton Romper with Waist Tie</h3>
-              <p id="description">Super chic romper for those casual days. Breezy and light for the summer, pair with a white sneaker or wedges for an elevated look!</p>
-              <form>
-                <fieldset>
-                  <legend>Colours</legend>
-                  <ul>
-                    <li><label><input type="radio" name="colour" value="p"> <span>Pink</span></label></li>
-                    <li><label><input type="radio" name="colour" value="w"> <span>White</span></label></li>
-                    <li><label><input type="radio" name="colour" value="lb"> <span>Light Blue</span></label></li>
-                  </ul>
-                </fieldset>
-
-                <fieldset>
-                  <legend>Sizes</legend>
-                  <ol>
-                    <li><label><input type="radio" name="size" value="xs"> <span>XS</span></label></li>
-                    <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
-                    <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
-                    <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
-                    <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                    <li><label><input type="radio" name="size" value="xxl"> <span>XXL</span></label></li>
-                  </ol>
-                </fieldset>
-
-                <footer>
-                  <dl>
-                    <dt>Rating</dt>
-                    <dd>4.0 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span></dd>
-                  </dl>
-                  <data value="39"><del>$50.00</del> <ins id="price">$39.00</ins></data>
-                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-                  <button type="button"><span class="material-icons">favorite</span></button>
-                  <a href="#">see more</a>
-                </footer>
-              </form>
-            </section>
-          </article>
-
-          <!-- Product 2 -->
-          <article class="product">
-            <header>
-              <img src="img/embrod_front.jpg" alt="Mesh Dress">
-            </header>
-            <section class="product2">
-              <h3>Embroidered Mesh Dress</h3>
-              <p>Simply perfect embroidered mesh midi dress. Made from a lightweight cotton blend and mesh lining with zipper closure at back and topped with a v-neckline. Could be dressed up or down for various occassions.</p>
-              <form>
-                <fieldset>
-                  <legend>Colours</legend>
-                  <ul>
-                    <li><label><input type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  </ul>
-                </fieldset>
-
-                <fieldset>
-                  <legend>Sizes</legend>
-                  <ol>
-                    <li><label><input type="radio" name="size" value="xs"> <span>XS</span></label></li>
-                    <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
-                    <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
-                    <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
-                    <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                    <li><label><input type="radio" name="size" value="xxl"> <span>XXL</span></label></li>
-                  </ol>
-                </fieldset>
-
-                <footer>
-                  <dl>
-                    <dt>Rating</dt>
-                    <dd>4.5 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                  </dl>
-                  <data value="50"><del>$60.00</del> <ins>$50.00</ins></data>
-                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-                  <button type="button"><span class="material-icons">favorite</span></button>
-                  <a href="#">see more</a>
-                </footer>
-              </form>
-            </section>
-          </article>
-
-          <!-- Product 3 -->
-          <article class="product">
-            <header>
-              <img src="img/stripes.jpg" alt="Striped Maxi Dress">
-            </header>
-            <section class="product3">
-              <h3>Striped Maxi Dress with Slit</h3>
-              <p>Soft, comfortable cotton for a relaxing fit. Front-tie waist and leg slit for a chic, feminine look.</p>
-              <form>
-                <fieldset>
-                  <legend>Colours</legend>
-                  <ul>
-                    <li><label><input type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  </ul>
-                </fieldset>
-
-                <fieldset>
-                  <legend>Sizes</legend>
-                  <ol>
-                      <li><label><input type="radio" name="size" value="xs"> <span>XS</span></label></li>
-                      <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
-                      <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
-                      <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
-                      <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                      <li><label><input type="radio" name="size" value="xxl"> <span>XXL</span></label></li>
-                  </ol>
-                </fieldset>
-
-                <footer>
-                  <dl>
-                    <dt>Rating</dt>
-                    <dd>4.0<span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span></dd>
-                  </dl>
-                  <data value="55"><del>$60.00</del> <ins>$55.00</ins></data>
-                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-                  <button type="button"><span class="material-icons">favorite</span></button>
-                  <a href="#">see more</a>
-                </footer>
-              </form>
-            </section>
-          </article>
-    
-          <!-- Product 4 -->
-          <article class="product">
-            <header>
-              <img src="img/floraldress.jpg" alt="Black Floral Maxi Dress">
-            </header>
-            <section class="product4">
-              <h3>Black Floral Maxi Dress</h3>
-              <p>Flowy every-day maxi dress made with medium-weight fabric. Wrapping, maxi skirt secured with internal ties and waist sash.</p>
-              <form>
-                <fieldset>
-                  <legend>Colours</legend>
-                  <ul>
-                    <li><label><input type="radio" name="colour" value="b"> <span>Black</span></label></li>
-                  </ul>
-                </fieldset>
-
-                <fieldset>
-                  <legend>Sizes</legend>
-                  <ol>
-                      <li><label><input type="radio" name="size" value="xs"> <span>XS</span></label></li>
-                      <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
-                      <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
-                      <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
-                      <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                      <li><label><input type="radio" name="size" value="xxl"> <span>XXL</span></label></li>
-                  </ol>
-                </fieldset>
-
-                <footer>
-                  <dl>
-                    <dt>Rating</dt>
-                    <dd>3.5 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                  </dl>
-                  <data value="30"><del>$40.00</del> <ins>$30.00</ins></data>
-                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-                  <button type="button"><span class="material-icons">favorite</span></button>
-                  <a href="#">see more</a>
-                </footer>
-              </form>
-            </section>
-          </article>
-
-          <!-- Product 5 -->
-          <article class="product">
-            <header>
-              <img src="img/coord.jpg" alt="Two Piece Off-White Set">
-            </header>
-            <section class="product5">
-              <h3>Two Piece Off-White Coord Set</h3>
-              <p>Style this together or separate! Vintage style halter top and front slit a-line skirt!</p>
-              <form>
-                <fieldset>
-                  <legend>Colours</legend>
-                  <ul>
-                    <li><label><input type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  </ul>
-                </fieldset>
-
-                <fieldset>
-                  <legend>Sizes</legend>
-                  <ol>
-                      <li><label><input type="radio" name="size" value="xs"> <span>XS</span></label></li>
-                      <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
-                      <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
-                      <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
-                      <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                      <li><label><input type="radio" name="size" value="xxl"> <span>XXL</span></label></li>
-                  </ol>
-                </fieldset>
-
-                <footer>
-                  <dl>
-                    <dt>Rating</dt>
-                    <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                  </dl>
-                  <data value="45"><del>$70.00</del> <ins>$45.00</ins></data>
-                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-                  <button type="button"><span class="material-icons">favorite</span></button>
-                  <a href="#">see more</a>
-                </footer>
-              </form>
-            </section>
-          </article>
-        </div>
+        <div id="products"></div>
       </section>
       <footer>
         <nav aria-label="Product Pages" class="product-pages">

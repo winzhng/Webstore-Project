@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixie Fashion</title>
+    <meta name="description" content="[A web store with options to add items to cart]">
+    <meta name="author" content="[Winnie Zhang]">
+    <link rel="stylesheet" href="css/reset.css"> <!-- You may change this "Reset" to "Normalize" if preferred -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <header>
+      <!-- Navigation menu and toggle button (non-functional) -->
+      <nav aria-label="Primary" class="primary">
+        <button type="button">
+          <span class="material-icons">menu</span>
+        </button>
+      <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+      </div>
+        <ul class="nav_links">
+          <li><button><a href="#">Dresses</a></button>
+            <ul class="dresses">
+              <li><a href="#">Casual</a></li>
+              <li><a href="#">Evening</a></li>
+              <li><a href="#">Bodycon</a></li>
+            </ul>
+          </li>
+          <li><button><a href="#">Shoes</a></button></li>
+          <li><button><a href="#">Tops</a></button></li>
+          <li><button><a href="#">Coats & Jackets</a></button></li>
+        </ul>
+      </nav>
+
+      <!-- Search for a product (non-functional) -->
+      <form>
+        <label>Search
+          <input type="search" name="find" id="find">
+        </label>
+        <button type="button"><span class="material-icons">search</span></button>
+      <!-- Additional nav links -->
+        <ul>
+          <li><a href="#"><span class="material-icons">favorite_border</span></a></li>
+          <li><a href="#"><span class="material-icons">shopping_cart</span></a></li>
+        </ul>
+      </form>
+    </header>
+
+    <main>
+      <header>
+        <h1>Sale on Dresses</h1>
+
+        <!-- Filtering product form -->
+        <form>
+          <h2>Filters</h2>
+          <fieldset>
+            <label for="sort">Show</label>
+            <select name="sort" id="sort">
+              <option value="price-high">Price, highest to lowest</option>
+              <option value="price-low">Price, lowest to highest</option>
+              <option value="newest">Newest releases</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Colour</legend>
+            <ul>
+              <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+              <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
+              <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+              <li><input type="checkbox" name="colour" value="pink" id="pink"> <label for="pink">Pink</label></li>
+              <li><input type="checkbox" name="colour" value="lightblue" id="lightblue"> <label for="lightblue">Light Blue</label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Sizes</legend>
+            <ol>
+              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
+              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
+              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
+              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
+              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
+              <li><input type="checkbox" name="size" value="xxl" id="xxl"> <label for="xl">XXL</label></li>
+            </ol>
+          </fieldset>
+          <fieldset>
+            <legend>Ratings (above)</legend>
+            <ol>
+              <li>
+                <input type="radio" name="rating" value="4" id="aboveFour">
+                <label for="aboveFour">
+                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="3" id="aboveThree">
+                <label for="aboveThree">
+                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="2" id="aboveTwo">
+                <label for="aboveTwo">
+                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="1" id="aboveOne">
+                <label for="aboveOne">
+                  <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+            </ol>
+          </fieldset>
+        </form>
+      </header>
+
+      <section>
+        <h2>Results</h2>
+
+        <div id="products">
+          <!-- Product 1 -->
+          <article class="product">
+            <header>
+              <img src="img/romper.jpg" alt="Romper">
+            </header>
+            <section class="product1">
+              <h3>Cotton Romper with Waist Tie</h3>
+              <p>Super chic romper for those casual days. Breezy and light for the summer, pair with a white sneaker or wedges for an elevated look!</p>
+              <form>
+                <fieldset>
+                  <legend>Colours</legend>
+                  <ul>
+                    <li><label><input type="radio" name="colour" value="p"> <span>Pink</span></label></li>
+                    <li><label><input type="radio" name="colour" value="w"> <span>White</span></label></li>
+                    <li><label><input type="radio" name="colour" value="lb"> <span>Light Blue</span></label></li>
+                  </ul>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Sizes</legend>
+                  <ol>
+                    <li><label><input type="radio" name="size" value="xs"> <span>XS</span></label></li>
+                    <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
+                    <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
+                    <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
+                    <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
+                    <li><label><input type="radio" name="size" value="xxl"> <span>XXL</span></label></li>
+                  </ol>
+                </fieldset>
+                <footer>
+                  
+                  <dl>
+                    <dt>Rating</dt>
+                    <dd>4.0 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span></dd>
+                  </dl>
+                  <div>
+                      Quantity available: 4
+                    </div>
+                  <data value="39"><del>$50.00</del> <ins id="price">$39.00</ins></data>
+                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+                  <button type="button"><span class="material-icons">favorite</span></button>
+                  <a href="#">see more</a>
+                </footer>
+              </form>
+            </section>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product">
+            <header>
+              <img src="img/embrod_front.jpg" alt="Mesh Dress">
+            </header>
+            <section class="product2">
+              <h3>Embroidered Mesh Dress</h3>
+              <p>Simply perfect embroidered mesh midi dress. Made from a lightweight cotton blend and mesh lining with zipper closure at back and topped with a v-neckline. Could be dressed up or down for various occassions.</p>
+              <form>
+                <fieldset>
+                  <legend>Colours</legend>
+                  <ul>
+                    <li><label><input type="radio" name="colour" value="w"> <span>White</span></label></li>
+                  </ul>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Sizes</legend>
+                  <ol>
+                    <li><label><input type="radio" name="size" value="xs"> <span>XS</span></label></li>
+                    <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
+                    <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
+                    <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
+                    <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
+                    <li><label><input type="radio" name="size" value="xxl"> <span>XXL</span></label></li>
+                  </ol>
+                </fieldset>
+
+                <footer>
+                  <dl>
+                    <dt>Rating</dt>
+                    <dd>4.5 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+                  </dl>
+                  <data value="50"><del>$60.00</del> <ins>$50.00</ins></data>
+                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+                  <button type="button"><span class="material-icons">favorite</span></button>
+                  <a href="#">see more</a>
+                </footer>
+              </form>
+            </section>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product">
+            <header>
+              <img src="img/stripes.jpg" alt="Striped Maxi Dress">
+            </header>
+            <section class="product3">
+              <h3>Striped Maxi Dress with Slit</h3>
+              <p>Soft, comfortable cotton for a relaxing fit. Front-tie waist and leg slit for a chic, feminine look.</p>
+              <form>
+                <fieldset>
+                  <legend>Colours</legend>
+                  <ul>
+                    <li><label><input type="radio" name="colour" value="w"> <span>White</span></label></li>
+                  </ul>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Sizes</legend>
+                  <ol>
+                      <li><label><input type="radio" name="size" value="xs"> <span>XS</span></label></li>
+                      <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
+                      <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
+                      <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
+                      <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
+                      <li><label><input type="radio" name="size" value="xxl"> <span>XXL</span></label></li>
+                  </ol>
+                </fieldset>
+
+                <footer>
+                  <dl>
+                    <dt>Rating</dt>
+                    <dd>4.0<span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span></dd>
+                  </dl>
+                  <data value="55"><del>$60.00</del> <ins>$55.00</ins></data>
+                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+                  <button type="button"><span class="material-icons">favorite</span></button>
+                  <a href="#">see more</a>
+                </footer>
+              </form>
+            </section>
+          </article>
+    
+          <!-- Product 4 -->
+          <article class="product">
+            <header>
+              <img src="img/floraldress.jpg" alt="Black Floral Maxi Dress">
+            </header>
+            <section class="product4">
+              <h3>Black Floral Maxi Dress</h3>
+              <p>Flowy every-day maxi dress made with medium-weight fabric. Wrapping, maxi skirt secured with internal ties and waist sash.</p>
+              <form>
+                <fieldset>
+                  <legend>Colours</legend>
+                  <ul>
+                    <li><label><input type="radio" name="colour" value="b"> <span>Black</span></label></li>
+                  </ul>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Sizes</legend>
+                  <ol>
+                      <li><label><input type="radio" name="size" value="xs"> <span>XS</span></label></li>
+                      <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
+                      <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
+                      <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
+                      <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
+                      <li><label><input type="radio" name="size" value="xxl"> <span>XXL</span></label></li>
+                  </ol>
+                </fieldset>
+
+                <footer>
+                  <dl>
+                    <dt>Rating</dt>
+                    <dd>3.5 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+                  </dl>
+                  <data value="30"><del>$40.00</del> <ins>$30.00</ins></data>
+                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+                  <button type="button"><span class="material-icons">favorite</span></button>
+                  <a href="#">see more</a>
+                </footer>
+              </form>
+            </section>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="product">
+            <header>
+              <img src="img/coord.jpg" alt="Two Piece Off-White Set">
+            </header>
+            <section class="product5">
+              <h3>Two Piece Off-White Coord Set</h3>
+              <p>Style this together or separate! Vintage style halter top and front slit a-line skirt!</p>
+              <form>
+                <fieldset>
+                  <legend>Colours</legend>
+                  <ul>
+                    <li><label><input type="radio" name="colour" value="w"> <span>White</span></label></li>
+                  </ul>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Sizes</legend>
+                  <ol>
+                      <li><label><input type="radio" name="size" value="xs"> <span>XS</span></label></li>
+                      <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
+                      <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
+                      <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
+                      <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
+                      <li><label><input type="radio" name="size" value="xxl"> <span>XXL</span></label></li>
+                  </ol>
+                </fieldset>
+
+                <footer>
+                  <dl>
+                    <dt>Rating</dt>
+                    <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+                  </dl>
+                  <data value="45"><del>$70.00</del> <ins>$45.00</ins></data>
+                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+                  <button type="button"><span class="material-icons">favorite</span></button>
+                  <a href="#">see more</a>
+                </footer>
+              </form>
+            </section>
+          </article>
+        </div>
+      </section>
+      <footer>
+        <nav aria-label="Product Pages" class="product-pages">
+          <p>1-5 of 20 products found</p>
+          <a href="#" aria-label="Previous page">prev</a>
+          <ol>
+            <li><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
+            <li><a href="#" aria-label="Page 2">2</a></li>
+            <li><a href="#" aria-label="Page 3">3</a></li>
+            <li><a href="#" aria-label="Page 4">4</a></li>
+          </ol>
+          <a href="#" aria-label="Next page">next</a>
+        </nav>
+      </footer>
+    </main>
+    <footer class="extras">
+      <p>&copy; Copyright, 1991.</p>
+      <nav aria-label="Legal">
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Accessibility Policy</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a href="#"><img src="img/fb.jpg"></a></li>
+        <li><a href="#"><img src="img/ig.jpg"></a></li>
+        <li><a href="#"><img src="img/tw.jpg"></a></li>
+      </ul>
+    </footer>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

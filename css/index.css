@@ -14,34 +14,46 @@ body{
     vertical-align: middle;
     display: inline-block;
 }
-.nav_links button{
+
+.page_nav_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_links {
+    display: inline-flex;
+}
+
+.nav_link_button button{
     vertical-align: top;
     background-color: #e7e7e7;
-    width: 100%;
+    width: 200px;
     padding: 10px;
     cursor: pointer;
     float: left;
     border-right: none;
 }
-.dresses li{
-    display: list-item;
+
+.header_icons{ 
+    display: inline-flex;
 }
+
 .product{
     display: grid;
     grid-template-columns: repeat (2, 1fr);
     grid-template-rows: repeat (5, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+    /* grid-auto-rows: minmax(100px, auto); */
 }
 .product1, .product2{
     grid-column-start: 2;
     grid-row: 1.75;
     margin-top: 1.5em;
 }
-.product3, .product4, .product5{
+/* .product3, .product4, .product5{
     grid-column-start: 2;
     grid-row: 1.75;
     margin-top: 1.5em;
-}
+} */
 
 .product img{
     width: 20em;
