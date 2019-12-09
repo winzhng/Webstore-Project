@@ -1,23 +1,26 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;
     background-color: #fafafa;
     color: #404347;
-    margin: 1.5em;
+    margin: 1em;
 }
 body{
     background-color: #fafafa;
 }   
+.menu{
+    display: inline-flex;
+}
 .logo{
-    height: 10em;
-    width: 10em;
+    height: 8em;
+    width: 8em;
     vertical-align: middle;
     display: inline-block;
 }
 
 .page_nav_header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .nav_links {
@@ -31,17 +34,37 @@ body{
     padding: 10px;
     cursor: pointer;
     float: left;
-    border-right: none;
+    justify-content: space-around;
 }
 
 .header_icons{ 
     display: inline-flex;
 }
+.filters{
+    display: inline-grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: repeat (2, 1fr);
+}
+
+.filter_colour{
+    grid-column-start: 1;
+    grid-row: 1;
+}
+
+.filter_size{
+    grid-column-start: 2;
+    grid-row: 1;
+}
+
+.filter_rating{
+    grid-column-start: 3;
+    grid-row: 1;
+}
 
 .product{
     display: grid;
     grid-template-columns: repeat (2, 1fr);
-    grid-template-rows: repeat (5, 1fr);
+    grid-template-rows: repeat (15, 1fr);
     /* grid-auto-rows: minmax(100px, auto); */
 }
 .product1, .product2{
@@ -49,25 +72,21 @@ body{
     grid-row: 1.75;
     margin-top: 1.5em;
 }
-/* .product3, .product4, .product5{
-    grid-column-start: 2;
-    grid-row: 1.75;
-    margin-top: 1.5em;
-} */
-
 .product img{
-    width: 20em;
-    margin-left: 2em;
+    width: 22em;
     padding: 15px;
-    margin-bottom: 1em;
+    float: right;
 }
 h1{
-    font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2em;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    letter-spacing: 0.10em;
+
 }
 h3{
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 1.25em;
+    font-family: 'Bebas Neue', cursive;
 }
 a, .material-icons{
     color: salmon;
@@ -76,22 +95,23 @@ a, .material-icons{
 }
 p {
     font-size: 14px;
+    width: 400px;
     margin-top: 1em;
 }
 fieldset{
     margin-top: 2em;
     list-style: none;
-
 }
 fieldset li{
     display: inline;
     justify-content: space-between;
 }
-.product-pages li {
+.product_pages li {
     list-style: none;
     display: inline-block;
+    padding: 1.5em;
 }
-.extras p, .product-pages{
+.product_pages{
     text-align: center;
     list-style: none;
 }
@@ -104,3 +124,20 @@ fieldset li{
     padding: 0.25em;
     width: 2.5em;
 }
+
+@media screen and (min-width: 200px) and (max-width: 450px){
+    .product img{
+    width: 200px;
+    float: left;
+    }
+
+    .menu{
+        width: 200px;
+    }
+
+@media screen and (min-width: 550px) {
+  
+.product{
+display: inline-block;
+}
+  
